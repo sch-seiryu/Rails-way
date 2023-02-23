@@ -1,0 +1,639 @@
+Microsoft Windows [Version 10.0.19044.2604]
+(c) Microsoft Corporation. All rights reserved.
+
+C:\WINDOWS\system32>cd %userprofile%
+
+C:\Users\Seiryu>cd Documents
+
+C:\Users\Seiryu\Documents>dir
+ C 드라이브의 볼륨: C_로컬 디스크
+ 볼륨 일련 번호: 0EB9-4E8F
+
+ C:\Users\Seiryu\Documents 디렉터리
+
+2023-02-22  오후 09:42    <DIR>          .
+2023-02-22  오후 09:42    <DIR>          ..
+2017-08-03  오후 08:39             2,256 !Cat-Daily Diary-Aug032017.txt
+2017-08-14  오전 11:36               690 !Daily Diary-Aug112017-+Cat.txt
+2017-08-02  오전 01:48            88,462 !FF14-Chat-Aug012017-+캣-Part2(+Hawk+PMC(파병얘기)).txt
+2017-11-09  오후 03:42             1,206 !LA-Nov092017-Should Be Noted on Slide.txt
+2017-07-31  오후 07:34             2,100 !Tabs-Chrome-Jul_312017.txt
+2023-02-22  오후 09:42           227,579 'VY_AJ9.jpg
+2017-08-23  오후 01:46            15,887 524220_20170823134637_1.png
+2017-12-15  오후 05:25    <DIR>          Android Project
+2020-11-24  오후 08:29    <DIR>          Archive
+2017-10-29  오전 12:07    <DIR>          Assassin's Creed IV Black Flag
+2017-10-10  오후 01:41               828 CA-KNU-20172-Oct102017.txt
+2017-10-26  오후 12:47               882 CA-KNU-20172-Oct262017.txt
+2017-09-14  오전 11:44             1,192 CA-KNU-20172-Sep142017.txt
+2017-09-21  오전 11:47             1,618 CA-KNU-20172-Sep212017.txt
+2018-10-02  오후 05:39    <DIR>          Cat
+2017-07-02  오후 05:57               242 Cat-Diary-Jul022017-XH57.txt
+2017-07-03  오후 04:02               152 Cat-Diary-Jul032017.txt
+2018-03-21  오후 05:58             2,162 Cat-Hawk-STEAM-Log-Mar212018-XH57.txt
+2017-07-01  오후 10:38               172 Cat-Jun292017.txt
+2017-08-21  오후 03:09             1,064 Cat-STEAM-Aug202017-+프로필.txt
+2017-08-02  오전 01:50             5,504 Cat-STEAM-Chat-Aug012017.txt
+2017-08-03  오전 12:50             1,780 Cat-STEAM-Chat-Aug022017.txt
+2017-08-04  오전 01:13             3,414 Cat-STEAM-Chat-Aug032017+Info.txt
+2017-08-04  오후 04:48             1,064 Cat-STEAM-Chat-Aug042017.txt
+2017-08-06  오전 02:14             2,564 Cat-STEAM-Chat-Aug052017.txt
+2017-08-07  오전 01:24             3,702 Cat-STEAM-Chat-Aug062017.txt
+2017-08-08  오전 12:33             3,034 Cat-STEAM-Chat-Aug072017.txt
+2017-08-09  오전 12:48             3,584 Cat-STEAM-Chat-Aug082017.txt
+2017-08-09  오후 11:42             3,248 Cat-STEAM-Chat-Aug092017.txt
+2017-08-11  오전 12:08             7,016 Cat-STEAM-Chat-Aug102017.txt
+2017-08-12  오전 01:23             2,586 Cat-STEAM-Chat-Aug112017.txt
+2017-08-13  오전 01:27             5,472 Cat-STEAM-Chat-Aug122017.txt
+2017-08-14  오전 01:07             7,174 Cat-STEAM-Chat-Aug132017.txt
+2017-08-15  오전 01:46             4,670 Cat-STEAM-Chat-Aug142017.txt
+2017-08-16  오전 01:16               800 Cat-STEAM-Chat-Aug152017.txt
+2017-08-16  오후 11:15             1,206 Cat-STEAM-Chat-Aug162017.txt
+2017-08-18  오전 12:39             3,922 Cat-STEAM-Chat-Aug172017.txt
+2017-08-19  오전 02:43             5,128 Cat-STEAM-Chat-Aug182017.txt
+2017-08-20  오전 02:11             8,052 Cat-STEAM-Chat-Aug192017.txt
+2017-08-21  오후 05:21             6,888 Cat-STEAM-Chat-Aug202017.txt
+2017-08-22  오전 01:26            18,136 Cat-STEAM-Chat-Aug212017.txt
+2017-08-23  오후 01:03             5,456 Cat-STEAM-Chat-Aug222017.txt
+2017-08-26  오전 11:40             9,486 Cat-STEAM-Chat-Aug232017.txt
+2017-08-30  오후 09:41            11,356 Cat-STEAM-Chat-Aug242017.txt
+2017-08-26  오전 03:01            11,534 Cat-STEAM-Chat-Aug252017.txt
+2017-08-30  오후 09:36             8,752 Cat-STEAM-Chat-Aug262017.txt
+2017-08-30  오후 09:51             3,184 Cat-STEAM-Chat-Aug272017.txt
+2017-07-04  오후 06:43             1,316 Cat-STEAM-Chat-Jul042017.txt
+2017-07-10  오후 06:28             1,092 Cat-STEAM-Chat-Jul102017.txt
+2017-07-13  오후 06:35             1,408 Cat-STEAM-Chat-Jul132017.txt
+2017-07-15  오전 01:07               214 Cat-STEAM-Chat-Jul142017.txt
+2017-07-16  오전 04:33               498 Cat-STEAM-Chat-Jul152017.txt
+2017-07-18  오후 04:36               546 Cat-STEAM-Chat-Jul182017.txt
+2017-07-24  오후 04:20             4,744 Cat-STEAM-Chat-Jul242017-XH57.txt
+2017-07-25  오후 04:18               442 Cat-STEAM-Chat-Jul252017-XH57.txt
+2017-07-27  오후 05:35               916 Cat-STEAM-Chat-Jul272017-XH57.txt
+2017-07-30  오전 03:34             5,356 Cat-STEAM-Chat-Jul292017-XH57.txt
+2017-07-31  오전 12:40             1,044 Cat-STEAM-Chat-Jul302017.txt
+2017-08-01  오전 02:50             1,752 Cat-STEAM-Chat-Jul312017.txt
+2017-09-07  오전 12:15             6,130 Cat-STEAM-Chat-Sep062017.txt
+2017-06-29  오전 09:05               582 Cat-STEAM-Jun282017.txt
+2018-04-20  오후 06:12               576 Cat-STEAM-Log-Apr2018.txt
+2019-04-23  오후 06:43             5,766 Cat-STEAM-Log-Apr2019[XH57].txt
+2018-08-10  오후 11:36               810 Cat-STEAM-Log-Aug2018.txt
+2017-12-01  오후 02:03               516 Cat-STEAM-Log-Dec2017.txt
+2018-02-17  오전 12:55               512 Cat-STEAM-Log-Feb2018.txt
+2018-01-23  오전 12:05               586 Cat-STEAM-Log-Jan2018.txt
+2018-04-06  오후 06:05            19,188 Cat-STEAM-Log-Mar2018.txt
+2018-07-01  오후 03:00             6,154 Cat-STEAM-Log-May2018.txt
+2017-12-01  오전 11:47            23,790 Cat-STEAM-Log-Nov2017.txt
+2017-11-03  오후 06:18             2,278 Cat-STEAM-Log-Oct2017.txt
+2017-10-05  오후 04:07             1,568 Cat-STEAM-Oct2017.txt
+2019-11-01  오후 11:58            16,250 Cat-Twitch-Broadcast-01Nov2019.txt
+2019-04-03  오전 01:28             4,982 Cat-Twitch-Broadcast-02Apr2019.txt
+2019-07-03  오전 01:09            42,022 Cat-Twitch-Broadcast-02Jul2019.txt
+2019-06-02  오후 11:12             1,138 Cat-Twitch-Broadcast-02Jun2019.txt
+2020-04-03  오후 08:10            15,787 Cat-Twitch-Broadcast-03Apr2020.txt
+2019-02-03  오후 02:07            20,290 Cat-Twitch-Broadcast-03Feb2019.txt
+2019-03-03  오후 06:19            51,974 Cat-Twitch-Broadcast-03Mar2019.txt
+2019-06-04  오후 11:12            11,289 Cat-Twitch-Broadcast-04Jun2019.txt
+2019-04-05  오전 02:33            10,888 Cat-Twitch-Broadcast-05Apr2019.txt
+2019-02-06  오후 08:24            22,378 Cat-Twitch-Broadcast-05Feb2019.txt
+2019-05-05  오후 11:21            43,690 Cat-Twitch-Broadcast-05May2019-2.txt
+2019-05-05  오후 07:50             5,660 Cat-Twitch-Broadcast-05May2019.txt
+2019-02-06  오후 10:43             6,920 Cat-Twitch-Broadcast-06Feb2019.txt
+2019-03-07  오전 12:12             8,530 Cat-Twitch-Broadcast-06Mar2019.txt
+2019-11-07  오후 11:44            15,860 Cat-Twitch-Broadcast-07Nov2019.txt
+2019-07-08  오후 03:02            18,096 Cat-Twitch-Broadcast-08Jul2019.txt
+2019-06-09  오전 01:13             5,167 Cat-Twitch-Broadcast-08Jun2019.txt
+2019-05-10  오전 02:46             8,247 Cat-Twitch-Broadcast-09May2019.txt
+2019-02-12  오전 12:44            38,740 Cat-Twitch-Broadcast-11Feb2019.txt
+2019-05-12  오전 01:13            24,664 Cat-Twitch-Broadcast-11May2019.txt
+2019-04-14  오후 07:36            10,816 Cat-Twitch-Broadcast-14Apr2019.txt
+2019-12-14  오후 11:29             4,719 Cat-Twitch-Broadcast-14Dec2019.txt
+2019-04-16  오후 09:52            16,954 Cat-Twitch-Broadcast-16Apr2019.txt
+2019-02-17  오전 01:57             5,698 Cat-Twitch-Broadcast-16Feb2019-2.txt
+2019-02-16  오후 03:23             2,050 Cat-Twitch-Broadcast-16Feb2019.txt
+2019-02-17  오후 09:43             5,666 Cat-Twitch-Broadcast-17Feb2019.txt
+2019-03-19  오후 11:07             3,516 Cat-Twitch-Broadcast-19Mar2019.txt
+2019-03-21  오후 10:28            27,484 Cat-Twitch-Broadcast-20Mar2019.txt
+2020-03-20  오후 10:03             1,440 Cat-Twitch-Broadcast-20Mar2020.txt
+2019-04-22  오전 02:24            26,976 Cat-Twitch-Broadcast-21Apr2019.txt
+2019-03-22  오전 01:11            16,652 Cat-Twitch-Broadcast-21Mar2019.txt
+2019-05-21  오후 11:40            11,099 Cat-Twitch-Broadcast-21May2019.txt
+2019-02-23  오전 01:06             6,812 Cat-Twitch-Broadcast-22Feb2019.txt
+2020-01-22  오후 11:32             7,446 Cat-Twitch-Broadcast-22Jan2019.txt
+2019-02-23  오후 11:08             8,056 Cat-Twitch-Broadcast-23Feb2019.txt
+2019-01-23  오후 10:34            18,204 Cat-Twitch-Broadcast-23Jan2019.txt
+2019-06-24  오후 11:29             1,998 Cat-Twitch-Broadcast-23Jun2019-SERAPIS에서 이어서 일부.txt
+2019-05-24  오전 12:17            32,615 Cat-Twitch-Broadcast-23May2019.txt
+2019-11-23  오후 11:25             9,096 Cat-Twitch-Broadcast-23Nov2019.txt
+2019-04-24  오후 10:02             3,610 Cat-Twitch-Broadcast-24Apr2019.txt
+2019-06-25  오전 10:20            12,992 Cat-Twitch-Broadcast-24Jun2019.txt
+2020-02-25  오후 06:15             5,010 Cat-Twitch-Broadcast-25Feb2020.txt
+2019-01-25  오후 11:24            33,104 Cat-Twitch-Broadcast-25Jan2019.txt
+2020-01-25  오후 11:19             9,067 Cat-Twitch-Broadcast-25Jan2020.txt
+2019-06-26  오후 02:35            34,474 Cat-Twitch-Broadcast-25Jun2019.txt
+2019-03-25  오후 11:01            20,300 Cat-Twitch-Broadcast-25Mar2019.txt
+2019-10-27  오전 12:18            21,800 Cat-Twitch-Broadcast-26Oct2019.txt
+2019-01-28  오전 01:41             1,340 Cat-Twitch-Broadcast-27Jan2019.txt
+2019-06-28  오전 09:23            63,417 Cat-Twitch-Broadcast-27Jun2019.txt
+2019-03-28  오전 12:19             8,190 Cat-Twitch-Broadcast-27Mar2019.txt
+2019-10-28  오전 12:36             3,699 Cat-Twitch-Broadcast-27Oct2019.txt
+2019-01-30  오전 02:09               446 Cat-Twitch-Broadcast-30Jan2019.txt
+2019-05-30  오후 11:25             1,032 Cat-Twitch-Broadcast-30May2019.txt
+2020-01-01  오전 12:53             8,900 Cat-Twitch-Broadcast-31Dec2019.txt
+2018-10-11  오후 12:59            10,700 Cat-Twitch-Broadcast-Oct052018.txt
+2018-08-15  오전 11:24            23,428 Cat-Yotubue-Log-Aug152018.txt
+2019-01-23  오전 11:47             7,210 Cat-Youtube-Broadcast-09Jan2019.txt
+2018-12-12  오후 09:59             5,608 Cat-Youtube-Broadcast-12Dec2018.txt
+2018-11-21  오전 02:02            41,656 Cat-Youtube-Broadcast-20Nov2018.txt
+2019-01-23  오전 11:47            18,488 Cat-Youtube-Broadcast-27Dec2018.txt
+2018-11-06  오후 10:07             1,956 Cat-Youtube-Broadcast-Oct212018.txt
+2018-11-06  오후 10:07            20,904 Cat-Youtube-Broadcast-Oct222018.txt
+2018-11-06  오후 10:07            27,704 Cat-Youtube-Broadcast-Oct292018.txt
+2019-01-23  오전 11:47             8,786 Cat-Youtube-Log-05Jan2019.txt
+2019-01-23  오전 11:47            10,100 Cat-Youtube-Log-26Dec2018.txt
+2018-04-01  오후 05:06             6,554 Cat-Youtube-Log-Apr012018.txt
+2018-04-04  오전 01:27            29,516 Cat-Youtube-Log-Apr032018.txt
+2018-04-07  오전 01:50             3,980 Cat-Youtube-Log-Apr062018.txt
+2018-04-08  오전 12:24            13,734 Cat-Youtube-Log-Apr072018.txt
+2018-04-08  오후 10:25             5,012 Cat-Youtube-Log-Apr082018.txt
+2018-04-11  오전 01:35             1,290 Cat-Youtube-Log-Apr102018.txt
+2018-04-12  오후 09:29             4,942 Cat-Youtube-Log-Apr122018-2.txt
+2018-04-12  오전 02:36               746 Cat-Youtube-Log-Apr122018.txt
+2018-04-15  오전 04:24             7,364 Cat-Youtube-Log-Apr142018-2-Raw.txt
+2018-04-15  오전 03:09             5,002 Cat-Youtube-Log-Apr142018-2.txt
+2018-04-14  오전 10:53             4,002 Cat-Youtube-Log-Apr142018-Raw.txt
+2018-04-14  오전 02:48            10,248 Cat-Youtube-Log-Apr142018.txt
+2018-04-15  오후 06:27             3,338 Cat-Youtube-Log-Apr152018.txt
+2018-04-17  오전 03:01             7,592 Cat-Youtube-Log-Apr162018.txt
+2018-04-18  오전 02:10             8,802 Cat-Youtube-Log-Apr172018-+중요.txt
+2018-04-20  오후 06:22             6,420 Cat-Youtube-Log-Apr182018.txt
+2018-04-20  오후 12:43             4,128 Cat-Youtube-Log-Apr192018.txt
+2018-04-21  오전 03:09               928 Cat-Youtube-Log-Apr202018.txt
+2018-04-22  오후 06:23               790 Cat-Youtube-Log-Apr202018[Raw].txt
+2018-04-23  오전 02:46             6,816 Cat-Youtube-Log-Apr222018.txt
+2018-04-25  오전 01:35            16,284 Cat-Youtube-Log-Apr242018.txt
+2018-04-27  오전 12:16            20,006 Cat-Youtube-Log-Apr262018.txt
+2018-05-06  오후 04:52            30,740 Cat-Youtube-Log-Apr272018-Raw(Partial).txt
+2018-05-06  오후 04:52            18,744 Cat-Youtube-Log-Apr272018.txt
+2018-05-06  오후 04:53            21,932 Cat-Youtube-Log-Apr282018-2.txt
+2018-05-06  오후 04:53             4,906 Cat-Youtube-Log-Apr282018-Raw(Partial).txt
+2018-05-06  오후 04:52             1,502 Cat-Youtube-Log-Apr282018.txt
+2018-04-29  오후 09:22             3,868 Cat-Youtube-Log-Apr292018-2.txt
+2018-05-06  오후 04:53            24,502 Cat-Youtube-Log-Apr292018.txt
+2018-08-03  오전 02:04            23,952 Cat-Youtube-Log-Aug022018.txt
+2018-08-04  오전 03:14            33,332 Cat-Youtube-Log-Aug032018.txt
+2018-08-05  오후 11:53            42,484 Cat-Youtube-Log-Aug052018.txt
+2018-08-07  오전 04:02            17,554 Cat-Youtube-Log-Aug062018.txt
+2018-08-09  오전 03:20            23,826 Cat-Youtube-Log-Aug082018.txt
+2018-09-05  오후 10:37            40,988 Cat-Youtube-Log-Aug232018-#!#!#!-FaceRig 최초 사용.txt
+2018-08-25  오후 07:32            18,606 Cat-Youtube-Log-Aug252018.txt
+2018-08-27  오전 12:42            15,428 Cat-Youtube-Log-Aug262018.txt
+2018-08-31  오전 12:31            16,032 Cat-Youtube-Log-Aug302018.txt
+2017-12-03  오후 06:36            30,840 Cat-Youtube-Log-Dec022017-2.txt
+2017-12-02  오후 06:48             6,512 Cat-Youtube-Log-Dec022017.txt
+2017-12-06  오후 09:46             2,644 Cat-Youtube-Log-Dec062017-2.txt
+2017-12-06  오후 09:26            16,704 Cat-Youtube-Log-Dec062017.txt
+2017-12-08  오후 10:02            13,154 Cat-Youtube-Log-Dec082017.txt
+2017-12-09  오후 11:41            11,902 Cat-Youtube-Log-Dec092017.txt
+2017-12-10  오후 09:50             4,086 Cat-Youtube-Log-Dec102017-2.txt
+2017-12-12  오전 02:09             9,786 Cat-Youtube-Log-Dec112017.txt
+2017-12-13  오후 09:35            15,190 Cat-Youtube-Log-Dec132017.txt
+2017-12-14  오후 08:59             4,710 Cat-Youtube-Log-Dec142017.txt
+2017-12-16  오전 04:13             6,964 Cat-Youtube-Log-Dec152017.txt
+2017-12-17  오전 02:22             3,868 Cat-Youtube-Log-Dec162017-2.txt
+2017-12-17  오전 12:03            17,190 Cat-Youtube-Log-Dec162017.txt
+2017-12-17  오후 11:32             5,142 Cat-Youtube-Log-Dec172017-2.txt
+2017-12-18  오전 02:14             4,132 Cat-Youtube-Log-Dec172017-3.txt
+2017-12-17  오후 06:35             1,776 Cat-Youtube-Log-Dec172017.txt
+2017-12-24  오전 02:08            10,900 Cat-Youtube-Log-Dec232017-2.txt
+2017-12-23  오전 03:44             5,918 Cat-Youtube-Log-Dec232017.txt
+2017-12-25  오후 05:18               848 Cat-Youtube-Log-Dec252017.txt
+2017-12-30  오후 03:47            27,524 Cat-Youtube-Log-Dec302017.txt
+2017-12-31  오후 05:17            13,008 Cat-Youtube-Log-Dec312017.txt
+2018-02-16  오후 08:09            23,326 Cat-Youtube-Log-Feb022018.txt
+2018-02-16  오후 08:09            71,806 Cat-Youtube-Log-Feb042018.txt
+2018-02-16  오후 08:09             1,764 Cat-Youtube-Log-Feb062018.txt
+2018-02-16  오후 08:09            15,128 Cat-Youtube-Log-Feb082018.txt
+2018-02-10  오후 11:27            30,150 Cat-Youtube-Log-Feb102018.txt
+2018-02-16  오후 08:09             9,872 Cat-Youtube-Log-Feb112018.txt
+2018-02-16  오후 08:09            29,898 Cat-Youtube-Log-Feb142018.txt
+2018-02-16  오전 12:45            17,900 Cat-Youtube-Log-Feb152018.txt
+2018-01-06  오후 04:38             7,926 Cat-Youtube-Log-Jan062018-2.txt
+2018-01-06  오전 04:37             7,298 Cat-Youtube-Log-Jan062018.txt
+2018-01-07  오후 02:59             9,108 Cat-Youtube-Log-Jan072018.txt
+2018-01-09  오후 11:10            11,034 Cat-Youtube-Log-Jan092018.txt
+2018-01-12  오후 09:17             7,568 Cat-Youtube-Log-Jan122018.txt
+2018-01-13  오후 04:19            10,088 Cat-Youtube-Log-Jan132018.txt
+2018-01-15  오후 04:14            15,696 Cat-Youtube-Log-Jan142018.txt
+2018-01-20  오전 04:21            17,390 Cat-Youtube-Log-Jan192018-Raw.txt
+2018-02-16  오후 08:06             1,704 Cat-Youtube-Log-Jan192018.txt
+2018-01-24  오후 10:28             6,600 Cat-Youtube-Log-Jan242018.txt
+2018-02-16  오후 08:08             5,330 Cat-Youtube-Log-Jan252018.txt
+2018-02-16  오후 08:08            43,798 Cat-Youtube-Log-Jan262018.txt
+2018-02-16  오후 08:08             2,506 Cat-Youtube-Log-Jan272018.txt
+2018-02-16  오후 08:08             6,836 Cat-Youtube-Log-Jan282018.txt
+2018-01-30  오후 09:47             3,640 Cat-Youtube-Log-Jan302018.txt
+2018-07-18  오전 12:46             5,006 Cat-Youtube-Log-Jul172018-2.txt
+2018-07-17  오전 08:32             5,358 Cat-Youtube-Log-Jul172018.txt
+2018-07-22  오전 01:25             9,922 Cat-Youtube-Log-Jul212018.txt
+2018-07-22  오후 06:28             3,292 Cat-Youtube-Log-Jul222018-2.txt
+2018-07-22  오후 03:21             1,578 Cat-Youtube-Log-Jul222018.txt
+2018-07-25  오전 12:00             1,662 Cat-Youtube-Log-Jul242018.txt
+2018-06-02  오전 02:28            26,424 Cat-Youtube-Log-Jun012018.txt
+2018-06-17  오전 01:02            10,834 Cat-Youtube-Log-Jun162018.txt
+2018-03-30  오후 12:37               284 Cat-Youtube-Log-Mar162018-1.txt
+2018-03-17  오후 01:11            24,942 Cat-Youtube-Log-Mar162018-2.txt
+2018-03-30  오후 12:37             8,348 Cat-Youtube-Log-Mar192018.txt
+2018-03-30  오후 12:38            16,804 Cat-Youtube-Log-Mar202018.txt
+2018-03-30  오후 12:38             6,078 Cat-Youtube-Log-Mar222018.txt
+2018-03-30  오후 12:38             6,154 Cat-Youtube-Log-Mar252018.txt
+2018-03-30  오후 12:38             5,822 Cat-Youtube-Log-Mar272018.txt
+2018-05-02  오전 01:40             5,114 Cat-Youtube-Log-May012018.txt
+2018-05-06  오후 04:53             2,650 Cat-Youtube-Log-May022018.txt
+2018-05-06  오후 04:53             3,742 Cat-Youtube-Log-May032018.txt
+2018-05-06  오전 02:54            16,304 Cat-Youtube-Log-May052018.txt
+2018-05-08  오후 10:26            11,644 Cat-Youtube-Log-May082018.txt
+2018-05-10  오전 02:11             7,188 Cat-Youtube-Log-May092018.txt
+2018-05-13  오전 01:02            17,290 Cat-Youtube-Log-May102018.txt
+2018-06-01  오전 12:51            21,264 Cat-Youtube-Log-May312018-.txt
+2017-11-05  오후 06:16            29,146 Cat-Youtube-Log-Nov032017.txt
+2017-11-16  오전 01:54             7,654 Cat-Youtube-Log-Nov072017.txt
+2017-11-16  오전 01:54             8,498 Cat-Youtube-Log-Nov092017.txt
+2017-11-16  오전 01:54            55,652 Cat-Youtube-Log-Nov112017.txt
+2017-11-16  오전 01:54            13,798 Cat-Youtube-Log-Nov122017.txt
+2017-11-15  오전 12:28            20,512 Cat-Youtube-Log-Nov142017.txt
+2017-11-19  오후 09:28             1,724 Cat-Youtube-Log-Nov192017.txt
+2017-11-29  오후 08:27             4,344 Cat-Youtube-Log-Nov242017.txt
+2017-11-29  오후 10:20            23,990 Cat-Youtube-Log-Nov292017.txt
+2017-10-11  오전 12:34            36,074 Cat-Youtube-Log-Oct102017.txt
+2017-10-13  오전 03:17            41,580 Cat-Youtube-Log-Oct122017.txt
+2017-10-17  오전 07:28            81,320 Cat-Youtube-Log-Oct132017.txt
+2017-10-17  오전 07:28            17,746 Cat-Youtube-Log-Oct142017.txt
+2017-10-17  오전 07:28            31,914 Cat-Youtube-Log-Oct152017.txt
+2017-10-17  오후 10:57            25,846 Cat-Youtube-Log-Oct172017.txt
+2017-11-16  오전 01:54            14,980 Cat-Youtube-Log-Oct212017-2.txt
+2017-11-16  오전 01:54            33,912 Cat-Youtube-Log-Oct222017.txt
+2017-11-16  오전 01:54            22,294 Cat-Youtube-Log-Oct232017.txt
+2017-10-26  오전 01:53            13,958 Cat-Youtube-Log-Oct252017.txt
+2017-09-10  오전 03:57             7,550 Cat-Youtube-Log-Sep092017-2.txt
+2017-09-09  오전 10:57             2,674 Cat-Youtube-Log-Sep092017.txt
+2017-09-10  오후 06:06             8,658 Cat-Youtube-Log-Sep102017.txt
+2017-09-15  오후 11:59            24,716 Cat-Youtube-Log-Sep152017.txt
+2017-09-17  오후 10:07             7,354 Cat-Youtube-Log-Sep172017.txt
+2017-10-03  오후 08:16             5,902 Cat-Youtube-Log-Sep252017.txt
+2017-07-04  오후 06:38               740 Cat-연락이 되면 알려줄 얘기들.txt
+2017-11-03  오후 06:18               826 CED-FinalTerm-Documentation.txt
+2017-12-10  오후 10:31             3,791 CED-FinalTerm-PrintPath.txt
+2017-12-12  오후 07:52             1,784 CED-FinalTerm-결과1.txt
+2017-12-12  오후 10:10             6,986 CED-FinalTerm-결과2.txt
+2017-10-25  오전 02:35            73,028 CED-MidTerm-Strategy.pptx
+2017-10-25  오전 02:23               895 CED-MidTerm-Strategy.txt
+2017-11-08  오후 05:06             2,122 CED-Nov082017.txt
+2017-11-15  오후 04:22               684 CED-Nov152017.txt
+2017-11-22  오후 05:24             1,858 CED-Nov222017.txt
+2017-11-29  오후 03:23             2,414 CED-Nov292017.txt
+2017-10-11  오후 05:20             1,584 CED-Oct112017.txt
+2017-10-25  오후 05:46             2,168 CED-Oct252017.txt
+2017-09-08  오후 04:29             3,240 CED-Sep062017.txt
+2017-09-21  오전 12:06             5,280 CED-Sep132017.txt
+2017-09-20  오후 05:46             2,296 CED-Sep202017.txt
+2017-09-27  오후 05:50             3,536 CED-Sep272017.txt
+2019-05-04  오후 05:20    <DIR>          ComboKey
+2022-12-01  오전 11:32           141,208 conda-conflicts-@221201_-1132.txt
+2022-12-01  오전 08:59           271,232 conda-conflicts-@221201_0859.txt
+2022-12-01  오전 11:33           129,685 conda-conflicts-@221201_1133.txt
+2018-04-20  오전 11:16             1,242 Daily Diary-Apr202018-XH57.txt
+2017-06-27  오전 04:04               390 Daily Diary-Jun272017.txt
+2017-07-12  오후 05:19               628 Daily-Memo-Jul122017.txt
+2019-05-03  오후 06:41               687 Dev-03May2019-SMarTMaNN-파일로 명령 받아 수행하기.txt
+2019-05-08  오후 12:02             6,784 Dev-04May2019-SMarTMaNN-작업, 목표, 참고사항.txt
+2019-05-05  오후 03:04             1,722 Dev-05May2019-SMarTMaNN-Module(Supportive)-실시간 FID 2차원 딕셔너리로 바꿔주는 모듈..txt
+2019-05-05  오후 02:04            17,616 Dev-05May2019-SMarTMaNN-키움 API 파라미터 정리.txt
+2019-03-07  오전 09:57             2,950 Dev-07Mar2019-SMarTMaNN.txt
+2019-05-08  오전 10:40             4,221 Dev-08May2019-SMarTMaNN-API 간이 목록 및 추출 코드.txt
+2019-01-23  오후 01:33             1,232 Dev-23Jan2019-XH57-Google Colab.txt
+2019-04-30  오후 05:35             1,788 Dev-27_30Apr2019.txt
+2019-04-01  오후 05:25             5,718 Dev-28Mar2019-+Python+SMarTMaNN[XH57].txt
+2019-04-12  오후 11:22             4,414 Dev-Temp-Apr11_122019-이전분 손실 가능성..txt
+2019-05-14  오후 03:18             2,162 Dev-_13May2019-SMarTMaNN-Temp.txt
+2017-08-28  오후 02:12               104 ENG2-Aug282017.txt
+2017-08-03  오후 06:02    <DIR>          FeedbackHub
+2017-08-01  오후 08:58            24,990 FF14-Chat-Aug012017-+캣.txt
+2017-08-03  오전 12:53             2,208 FF14-Chat-Aug022017-+캣+[메인].txt
+2017-08-06  오후 12:16            41,218 FF14-Chat-Aug062017-+캣+유라유라.txt
+2017-08-12  오후 02:41             1,528 FF14-Chat-Aug122017-+캣.txt
+2017-07-15  오전 12:43             3,642 FF14-Chat-Jul142017-XH57-+유라유라.txt
+2017-07-15  오후 02:24             1,906 FF14-Chat-Jul152017-+Hawk.txt
+2017-07-17  오전 01:54            46,900 FF14-Chat-Jul162017-+유라유라.txt
+2017-07-17  오후 05:59             3,844 FF14-Chat-Jul172017-XH57-+유라유라.txt
+2017-07-27  오후 05:40            51,404 FF14-Chat-Jul272017-XH57-+유라유라(+캣(에 대하여))+미코나.txt
+2017-07-31  오전 09:22             4,302 FF14-Chat-Jul292017-+캣+유라유라.txt
+2017-07-30  오후 10:01            89,482 FF14-Chat-Jul302017-+캣(+Info)+[메인].txt
+2017-08-01  오전 03:14            19,290 FF14-Chat-Jul312017-+캣+유라유라.txt
+2017-06-30  오후 03:21             3,090 FF14-Chat-Jun302017-+루에.txt
+2018-04-13  오후 04:35             8,120 FF14-Log-Apr132018[XH57].txt
+2018-01-03  오전 01:31             7,170 FF14-Log-Jan022017-+캣[XH57].txt
+2018-05-06  오후 08:49            19,700 FF14-Log-May0620180-+캣+구여+활템[XH57].txt
+2017-06-27  오전 04:47    <DIR>          FINAL FANTASY XIV Downloader
+2019-08-10  오후 04:39            30,930 HitomiCrawler.py
+2017-07-31  오후 07:38             1,020 HPMD-PhD.pdf - 바로 가기.lnk
+2018-03-28  오전 09:49               152 JP-Voca-Mar262018.txt
+2017-08-24  오후 10:28             1,000 KBRI-Mail-Aug2302017.txt
+2018-04-09  오후 02:10               244 KNU-20181-SE-Apr092018.txt
+2017-08-29  오후 02:24             1,986 LA-Aug292017.txt
+2019-01-23  오전 11:47             1,196 Log-Jan2019-XH57.txt
+2017-08-20  오후 12:06             1,256 Lyrics-Post-script (Deemo Ver.).txt
+2019-05-30  오후 11:15               346 M-Chan-List.txt
+2023-01-12  오전 11:13    <DIR>          Media[SERAPIS-Shared]
+2022-08-26  오전 11:52    <DIR>          My Games
+2017-08-17  오후 11:31    <DIR>          Overwatch
+2018-11-06  오후 11:01             2,132 pim_installmgr.log
+2017-08-29  오후 03:13               548 PS-Aug292017.txt
+2021-05-20  오후 08:31    <DIR>          PyCharmProjects
+2019-03-11  오전 01:21    <DIR>          Python Scripts
+2017-08-20  오후 02:31    <DIR>          R-TT
+2017-07-04  오후 03:55             3,454 STEAM-Jul042017-Valve 하드웨어 설문 조사. XH57에선 최초 실행인가...？.txt
+2017-07-16  오후 05:38             1,232 Tabs-M-Chrome-Incog-Jul_162017.txt
+2017-08-29  오후 06:35             1,248 TDP2-Aug292017.txt
+2017-11-22  오후 05:59             1,418 TDP2-Nov212017-성능 평가.txt
+2018-03-07  오후 01:03               532 TEM-STEAM-Log-Mar072018-XH57.txt
+2018-11-06  오후 10:07                70 Temp-06Nov2018-#!-손실분 의심.txt
+2019-06-15  오후 04:07               223 Temp-15Jun2019.txt
+2017-12-26  오전 03:39             6,180 TEMP-Cat-Youtube-Log-Dec252017.txt
+2017-07-12  오전 08:20             3,362 Temp-Jul_112017.txt
+2017-09-22  오후 06:03             6,644 Temp-Work-Aug212017.txt
+2019-08-08  오전 10:19             2,743 utils.py
+2017-10-11  오후 12:23    <DIR>          Visual Studio 2008
+2017-10-11  오후 02:14    <DIR>          Visual Studio 2010
+2019-07-29  오후 07:01    <DIR>          Visual Studio 2015
+2018-03-04  오후 08:03    <DIR>          Visual Studio 2017
+2018-02-12  오전 10:15             4,556 XH57-FF14-Log-Jan14-Feb122018-+캣.txt
+2020-05-13  오후 09:16    <DIR>          Zoom
+2023-01-06  오전 09:07             5,627 ㄴ.csv
+2023-01-06  오전 09:00             4,461 ㅁ.csv
+2017-08-10  오후 11:46             8,284 나래-STEAM-Chat-Aug102017.txt
+2018-04-20  오후 06:12            11,292 라피(yu)-STEAM-Log-Apr202018-XH57.txt
+2018-04-04  오전 01:28    <DIR>          미완성 문서
+2022-07-22  오후 04:01    <DIR>          소리 녹음
+2023-01-27  오후 02:27    <DIR>          카카오톡 받은 파일
+             341개 파일           4,549,277 바이트
+              23개 디렉터리   7,086,477,312 바이트 남음
+
+C:\Users\Seiryu\Documents>mkdir Ruby
+
+C:\Users\Seiryu\Documents>cd Ruby
+
+C:\Users\Seiryu\Documents\Ruby>rails new railsway
+      create
+      create  README.md
+      create  Rakefile
+      create  .ruby-version
+      create  config.ru
+      create  .gitignore
+      create  .gitattributes
+      create  Gemfile
+         run  git init from "."
+Initialized empty Git repository in C:/Users/Seiryu/Documents/Ruby/railsway/.git/
+      create  app
+      create  app/assets/config/manifest.js
+      create  app/assets/stylesheets/application.css
+      create  app/channels/application_cable/channel.rb
+      create  app/channels/application_cable/connection.rb
+      create  app/controllers/application_controller.rb
+      create  app/helpers/application_helper.rb
+      create  app/jobs/application_job.rb
+      create  app/mailers/application_mailer.rb
+      create  app/models/application_record.rb
+      create  app/views/layouts/application.html.erb
+      create  app/views/layouts/mailer.html.erb
+      create  app/views/layouts/mailer.text.erb
+      create  app/assets/images
+      create  app/assets/images/.keep
+      create  app/controllers/concerns/.keep
+      create  app/models/concerns/.keep
+      create  bin
+      create  bin/rails
+      create  bin/rake
+      create  bin/setup
+      create  config
+      create  config/routes.rb
+      create  config/application.rb
+      create  config/environment.rb
+      create  config/cable.yml
+      create  config/puma.rb
+      create  config/storage.yml
+      create  config/environments
+      create  config/environments/development.rb
+      create  config/environments/production.rb
+      create  config/environments/test.rb
+      create  config/initializers
+      create  config/initializers/assets.rb
+      create  config/initializers/content_security_policy.rb
+      create  config/initializers/cors.rb
+      create  config/initializers/filter_parameter_logging.rb
+      create  config/initializers/inflections.rb
+      create  config/initializers/new_framework_defaults_7_0.rb
+      create  config/initializers/permissions_policy.rb
+      create  config/locales
+      create  config/locales/en.yml
+      create  config/master.key
+      append  .gitignore
+      create  config/boot.rb
+      create  config/database.yml
+      create  db
+      create  db/seeds.rb
+      create  lib
+      create  lib/tasks
+      create  lib/tasks/.keep
+      create  lib/assets
+      create  lib/assets/.keep
+      create  log
+      create  log/.keep
+      create  public
+      create  public/404.html
+      create  public/422.html
+      create  public/500.html
+      create  public/apple-touch-icon-precomposed.png
+      create  public/apple-touch-icon.png
+      create  public/favicon.ico
+      create  public/robots.txt
+      create  tmp
+      create  tmp/.keep
+      create  tmp/pids
+      create  tmp/pids/.keep
+      create  tmp/cache
+      create  tmp/cache/assets
+      create  vendor
+      create  vendor/.keep
+      create  test/fixtures/files
+      create  test/fixtures/files/.keep
+      create  test/controllers
+      create  test/controllers/.keep
+      create  test/mailers
+      create  test/mailers/.keep
+      create  test/models
+      create  test/models/.keep
+      create  test/helpers
+      create  test/helpers/.keep
+      create  test/integration
+      create  test/integration/.keep
+      create  test/channels/application_cable/connection_test.rb
+      create  test/test_helper.rb
+      create  test/system
+      create  test/system/.keep
+      create  test/application_system_test_case.rb
+      create  storage
+      create  storage/.keep
+      create  tmp/storage
+      create  tmp/storage/.keep
+      remove  config/initializers/cors.rb
+      remove  config/initializers/new_framework_defaults_7_0.rb
+         run  bundle install
+Fetching gem metadata from https://rubygems.org/...........
+Resolving dependencies....
+Using rake 13.0.6
+Using concurrent-ruby 1.2.0
+Using builder 3.2.4
+Using erubi 1.12.0
+Using crass 1.0.6
+Using rack 2.2.6.2
+Fetching minitest 5.17.0
+Using nio4r 2.5.8
+Using websocket-extensions 0.1.5
+Fetching racc 1.6.2
+Using marcel 1.0.2
+Using mini_mime 1.1.2
+Fetching date 3.3.3
+Fetching timeout 0.3.2
+Installing timeout 0.3.2
+Installing racc 1.6.2 with native extensions
+Installing date 3.3.3 with native extensions
+Installing minitest 5.17.0
+Fetching public_suffix 5.0.1
+Fetching bindex 0.8.1
+Installing public_suffix 5.0.1
+Installing bindex 0.8.1 with native extensions
+Fetching msgpack 1.6.0
+Installing msgpack 1.6.0 with native extensions
+Using bundler 2.3.26
+Using matrix 0.4.2
+Fetching regexp_parser 2.7.0
+Installing regexp_parser 2.7.0
+Fetching io-console 0.6.0
+Installing io-console 0.6.0 with native extensions
+Using method_source 1.0.0
+Using thor 1.2.1
+Using zeitwerk 2.6.7
+Using rexml 3.2.5
+Fetching rubyzip 2.3.2
+Installing rubyzip 2.3.2
+Fetching websocket 1.2.9
+Installing websocket 1.2.9
+Fetching sqlite3 1.6.0 (x64-mingw-ucrt)
+Installing sqlite3 1.6.0 (x64-mingw-ucrt)
+Using i18n 1.12.0
+Using tzinfo 2.0.6
+Using rack-test 2.0.2
+Fetching sprockets 4.2.0
+Installing sprockets 4.2.0
+Using websocket-driver 0.7.5
+Fetching puma 5.6.5
+Installing puma 5.6.5 with native extensions
+Fetching net-protocol 0.2.1
+Installing net-protocol 0.2.1
+Fetching addressable 2.8.1
+Installing addressable 2.8.1
+Using nokogiri 1.14.2 (x64-mingw-ucrt)
+Fetching selenium-webdriver 4.8.1
+Installing selenium-webdriver 4.8.1
+Using activesupport 7.0.4.2
+Fetching tzinfo-data 1.2022.7
+Installing tzinfo-data 1.2022.7
+Fetching reline 0.3.2
+Installing reline 0.3.2
+Fetching net-pop 0.1.2
+Installing net-pop 0.1.2
+Fetching net-smtp 0.3.3
+Installing net-smtp 0.3.3
+Using loofah 2.19.1
+Fetching xpath 3.2.0
+Installing xpath 3.2.0
+Using rails-dom-testing 2.0.3
+Using globalid 1.1.0
+Using activemodel 7.0.4.2
+Fetching webdrivers 5.2.0
+Installing webdrivers 5.2.0
+Fetching irb 1.6.2
+Installing irb 1.6.2
+Using rails-html-sanitizer 1.5.0
+Using activejob 7.0.4.2
+Using activerecord 7.0.4.2
+Fetching capybara 3.38.0
+Installing capybara 3.38.0
+Using actionview 7.0.4.2
+Fetching debug 1.7.1
+Installing debug 1.7.1 with native extensions
+Using actionpack 7.0.4.2
+Fetching jbuilder 2.11.5
+Installing jbuilder 2.11.5
+Using actioncable 7.0.4.2
+Using activestorage 7.0.4.2
+Fetching net-imap 0.3.4
+Installing net-imap 0.3.4
+Using railties 7.0.4.2
+Fetching sprockets-rails 3.4.2
+Installing sprockets-rails 3.4.2
+Using actiontext 7.0.4.2
+Using mail 2.8.1
+Fetching importmap-rails 1.1.5
+Installing importmap-rails 1.1.5
+Fetching stimulus-rails 1.2.1
+Installing stimulus-rails 1.2.1
+Fetching turbo-rails 1.3.3
+Installing turbo-rails 1.3.3
+Fetching web-console 4.2.0
+Installing web-console 4.2.0
+Using actionmailbox 7.0.4.2
+Using actionmailer 7.0.4.2
+Using rails 7.0.4.2
+Fetching bootsnap 1.16.0
+Installing bootsnap 1.16.0 with native extensions
+Bundle complete! 15 Gemfile dependencies, 73 gems now installed.
+Use `bundle info [gemname]` to see where a bundled gem is installed.
+         run  bundle binstubs bundler
+       rails  importmap:install
+Add Importmap include tags in application layout
+      insert  app/views/layouts/application.html.erb
+Create application.js module as entrypoint
+      create  app/javascript/application.js
+Use vendor/javascript for downloaded pins
+      create  vendor/javascript
+      create  vendor/javascript/.keep
+Ensure JavaScript files are in the Sprocket manifest
+      append  app/assets/config/manifest.js
+Configure importmap paths in config/importmap.rb
+      create  config/importmap.rb
+Copying binstub
+      create  bin/importmap
+       rails  turbo:install stimulus:install
+Import Turbo
+      append  app/javascript/application.js
+Pin Turbo
+      append  config/importmap.rb
+Run turbo:install:redis to switch on Redis and use it in development for turbo streams
+Create controllers directory
+      create  app/javascript/controllers
+      create  app/javascript/controllers/index.js
+      create  app/javascript/controllers/application.js
+      create  app/javascript/controllers/hello_controller.js
+Import Stimulus controllers
+      append  app/javascript/application.js
+Pin Stimulus
+Appending: pin "@hotwired/stimulus", to: "stimulus.min.js", preload: true"
+      append  config/importmap.rb
+Appending: pin "@hotwired/stimulus-loading", to: "stimulus-loading.js", preload: true
+      append  config/importmap.rb
+Pin all controllers
+Appending: pin_all_from "app/javascript/controllers", under: "controllers"
+      append  config/importmap.rb
+
+C:\Users\Seiryu\Documents\Ruby>
