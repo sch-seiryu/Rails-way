@@ -1,0 +1,36 @@
+<%# 
+<h1>Contents#create</h1>
+<p>Find me in app/views/api/v1/contents/create.html.erb</p>
+ %>
+<h1>New Content</h1>
+
+
+<% if false %>
+<%# The guide refers 'helper', so I'm not sure following syntaxes are valid...
+<%= form_with model: @content do |form| %>  %>
+<% end %>
+
+<%= form_with url: "/api/v1/contents", method: :post do |form| %>
+<%# <%= form_with model: @content do |form| %>
+    <div>
+        <%= form.label :title %><br>
+        <%= form.text_field :title %>
+        <%# To display validation error %>
+        <% @content.errors.full_messages_for(:title).each do |message| %>
+            <div><%= message %></div>
+        <% end %>
+    </div>
+
+    <div>
+        <%= form.label :body %><br>
+        <%= form.text_area :body %>
+        <%# To display validation error %>
+        <% @content.errors.full_messages_for(:body).each do |message| %>
+            <div><%= message %></div>
+        <% end %>
+    </div>
+
+    <div>
+        <%= form.submit %>
+    </div>
+<% end %>

@@ -121,4 +121,49 @@ I'm planning to write down this document day by day, making it possible to figur
 ~~기절했다~~ 두 시간 남았다. 모델 형성 후, DB 마이그레이션으로 스키마를 생성하고, 할 수 있는 데까지 API랑 매핑하고 제출해야할 것 같다. 도커 적용 및 적절한 HTTP response를 모두 고려하기엔 시간이 부족하다.
 {2023-02-24 08:02:31}
 
-* 
+* 별도 브랜치로 사적인 내용이 담긴 이 문서를 보이지 않게 하려고 했는데, GitHub은 repo 단위의 공개 설정만 가능해서 그게 안된다는걸 잊고 있었다. 일단은 프로젝트가 일정 수준에 도달할 때까지 dev1에서만 본 문서를 tracking하게 하고, 본 문서를 포함, 비공개하고자 하는 내용은 별도의 repo를 duplicate하거나 혹은 해당 내용 전용 repo를 생성하여 collaborator를 설정하는 것으로 공개하든지 해야할 것 같다.
+
+* 일단 'generate model' 명령어로 ActiveRecord들을 생성해서 이후 DB migration까지 수행했다. 다만 User model과 관련해서, email을 unique로 잡아둬야할 것 같다. 채번을 선호하니 PK로 쓰고 싶지는 않고.
+
+* Controller의 parameter와 관련해서, *Rails*에선 query와 POST parameter를 구분하지 않는다고는 한다.
+또 먼저 본 예제 등을 통해 path/route parameter에 대해서도 마찬가지로 (구분 없이) 접근 가능한것 같은데, HTTP request body로 실려오는 것도 마찬가지로 따지는진 모르겠다(POST request라니까 어느정도 마찬가지려나. 근데 그러면 다른 request들은? 게다가 POST가 언급된 이유는 작성된 HTML form을 POST의 일부로서만 보낼 수 있기 때문이라는데, 그럼 또 얘기가 달라지지 않나? 게다가 중복되는 parameter명이 존재할 때는 어떤 문제가 생기는거지?)
+> https://edgeguides.rubyonrails.org/action_controller_overview.html#parameters
+
+### Tips
+* 'The (:references) keyword used in the shell command is a special data type for models.'
+    * 아마 나중에 모델에서 게시물 작성자 지정할 때 참고해야할 것
+* 'It is important to use redirect_to after mutating the database or application state. Otherwise, if the user refreshes the page, the browser will make the same request, and the mutation will be repeated.'
+    * 'render'는 현재 request에 상응하는 view rendering 하는 반면, 'redirect_to'는 페이지를 리디렉션함
+    * DB나 App의 상태가 바뀌었을 때는 중복된 변형을 방지하기위해 리디렉션을 권장
+
+## Day5
+### 여태까지 알게된 점, 그리고 새로 배우는 것들
+* API와 version을 위해 임의로 경로를 추가하고자 할 때는 config/routes.rb에서 namespace로 묶어야 한다.(depth 별로 하나씩)
+* 이미 generate 된 파일이 있는 상황이어서 controller로 generate 다시금 generate 하려고 하면 이상하게 된다. 
+    * --skip-routes 옵션을 주면 routes.rb에는 문제가 없지만 api 경로에 따른 위치에 controller가 배치되지 않고,
+    * 해당 옵션을 주지 않으면 routes.rb에 기본 경로 버전의 routes를 임의로 작성해버린다.
+* generate된 무언가를 삭제하려면 destroy 명령을 쓰면 정리된다.
+* 지금처럼 root 위치를 기반으로 generate된 파일들이 namespace로 묶인 API들과 호응하려면,
+    1. controller라면 앞에 'Api::V1::\<ControllerName\>' 같은 형식으로 클래스명을 바꿔줘야하며(PascalCase로 바뀜에 유의),
+    2. controller 파일의 위치 또한 상대 경로 기준으로, '.../controllers/'에서 '.../controllers/api/v1/'으로 옮겨줘야한다.
+    3. 이것은 view(*.html.erb)에 있어서도 마찬가지이며, 마찬가지로 상대경로를 추가해줘야 한다.
+    <br> *(설명해줄거면 한번에 좀 다 설명해주라고. 일일이 하나씩 수정할거면 manual이랑 무슨 차이냐)*
+* 어지간한 변경사항 정도는 Ruby가 인터프리터형 언어이기 때문에 매번 server를 재시작 할 필요 없이 변경 사항을 저장한 다음 request를 다시 시도하는 것으로 해결할 수 있다.(초기에는 프레임워크 관련 문제를 만든건지 구분을 하기 어려워서 server를 매번 재시작해왔고 꽤 시간 소모가 있었다)
+### 과제 관련
+* 당장은 다른게 문제가 아니라 이유를 알 수 없는 경로 파라미터인 'project'들과, 게시물에 필요한 사용자 정보 제공이 어떻게 이뤄지는지 기존 spec에 있지 않다는게 문제다.
+전자는 그냥 무시하면 되는데 후자 같은 경우에는 token 발급까지는 있지만, '게시물을 작성한 사용자'가 게시물의 수정 및 삭제 권한을 갖도록 하려면, POSTMAN의 예시를 보면 'Create Content'와 관련해, ...
+... bearer token이라면 그럼 POSTMAN에서 sign-in해서 수신한 다음에 보관해서 다시 보낸다는건가?
+그럼 서버쪽에선 해당 토큰에 맞는 유저에게 매핑을 하고?
+{2023-02-25 11:06:55}
+
+* 우선 auth 문제와 관련해서 JWT를 어떻게 취급하느냐를 알아보려고 했는데, 보안 파트에서 최근 본 익숙한 용어가 보여서 읽어보고 있다. [1]
+> [1] https://guides.rubyonrails.org/security.html#cross-site-request-forgery-csrf
+초보자 가이드(getting started)의 보안 챕터에선 'Basic Authentication'이라고 해서, controller에 Rails에서 제공하는 'http_basic_authenticate_with'를 이용하는 예제를  보여주고 있는데, JWT 등의 형태랑은 다른것처럼 보이기도 하고, 하드 코딩되는걸 보면 일종의 마스터키처럼 동작하는 권한인것 같은데, 이걸론 부족해보여서 JWT 및 인증/보안 관련 내용을 더 들여다봐야할 것 같다. 애초에 bearer token이어도 token을 내줘야하니까. [2]
+> https://guides.rubyonrails.org/getting_started.html#basic-authentication
+
+
+### ... (27. Feb. 2023)
+* '*.html.erb' 템플릿 작성시 사용되는 'form'과 관련된 함수들 reference
+    * 'email_field'나 'password_field' 같은 것도 여기서 확인할 수 있음
+> https://api.rubyonrails.org/v7.0.4/classes/ActionView/Helpers/FormBuilder.html
+* '$ ./bin/rails db:seed - 디비에 임의의 데이터가 입력된다~!!'

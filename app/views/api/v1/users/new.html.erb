@@ -1,0 +1,63 @@
+<h1>New User</h1>
+
+<%#= form_with model: @user do |form| %>
+<%= form_with url: "/api/v1/users/signup", method: :post do |form| %> 
+    <div>
+        <%= form.label :firstName %><br>
+        <%= form.text_field :firstName %>
+        <%# To display validation error %>
+        <% @user.errors.full_messages_for(:firstName).each do |message| %>
+            <div><%= message %></div>
+        <% end %>
+    </div>
+
+    <div>
+        <%= form.label :lastName %><br>
+        <%= form.text_field :lastName %>
+        <%# To display validation error %>
+        <% @user.errors.full_messages_for(:lastName).each do |message| %>
+            <div><%= message %></div>
+        <% end %>
+    </div>
+
+    <div>
+        <%= form.label :email %><br>
+        <%#= form.text_field :email %>
+        <%= form.email_field :email %>
+        <%# To display validation error %>
+        <% @user.errors.full_messages_for(:email).each do |message| %>
+            <div><%= message %></div>
+        <% end %>
+        <%
+=begin%>
+ <% if flash[:email_error] %>
+            <%= flash[:email_error] %>
+        <% end %> 
+<%
+=end%>
+    </div>
+
+    <div>
+        <%# TODO change this view for secure password writing %>
+        <%= form.label :password %><br>
+        <%= form.password_field :password %>
+        <%# To display validation error %>
+        <% @user.errors.full_messages_for(:password).each do |message| %>
+            <div><%= message %></div>
+        <% end %>
+    </div>
+
+    <div>
+        <%# TODO make this field optional, and deal with the default value for null(empty string) %>
+        <%= form.label :country %><br>
+        <%= form.text_field :country %>
+        <%# To display validation error %>
+        <% @user.errors.full_messages_for(:country).each do |message| %>
+            <div><%= message %></div>
+        <% end %>
+    </div>
+
+    <div>
+        <%= form.submit 'sign up' %>
+    </div>
+<% end %>

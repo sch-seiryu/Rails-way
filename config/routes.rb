@@ -16,26 +16,35 @@ Rails.application.routes.draw do
   # Defines the root path route ("/")
   # root "articles#index"
   # root "/api/v1", to ""
+  # root ""
 
   # root :controller => "static", :action => "/"
 
   namespace :api do
     namespace :v1 do
+      # [NOTE]Due to the given POSTMAN specification, using Resourceful Routing feature is discarded, to follow the spec first.
+      root "contents#index" # <Additional>
+
       # User management
+      # 여러모로 상당히 불편하고 해서, 회원가입 관련 기능 및 템플릿도 추가하기로 했다.
+      # 게시물 관련 auth 문제로 자잘하게 고통받느니(일단 사용자 정보가 게시물에 FK로 not null하게 물려있는게 크다. nullable하게 만들고 나중에 바꿔도 되겠지만 또 유저 삭제시 cascade 하는 그런것도 고려해야하고.)
+      # 그냥 유저가 무조건 있다고 가정하고자 한다.
+      get "/users/signin", to: "users#auth"
+      get "/users/signup", to: "users#new", defaults: { country: '' }  # optional field인 'country'의 default 설정을 여기서 해봄
+      
       post "/users/signup", to: "users#sign_up"
-      # TODO 분리 해야될거 같긴 한데 당장 이유를 설명 하기가 좀... 일단 동일한 model을 사용하기 때문에 action의 controller를 'users'로 두긴 했는데, 만약 별도의 과정이 필요하다면 중간 어딘가 적절하게 '보안/인증(auth)'를 담당하는 파트를 넣어야 해서가 아닐까 싶다.
-      # post "/auth/signin", to: "auth#sign_in"
       post "/auth/signin", to: "users#sign_in"
       # update "/users/profile", to: ""  # TODO 
-      # delete "/auth/delete", to: ""  # TODO 
+      delete "/auth/wipeout", to: "users#wipe_out" # <Additional> TODO
 
       # Content CRUD
       # [주의] 여기 post랑 get에 매칭돼야할 경로가 바뀐거 같은데요!
       # POSTMAN에 있는 collection 한번 봐주세요!
       # -> 그런 문제가 아닌거 같아 친구.
+      get "/contents", to: "contents#index" # <Additional>
+      get "/contents/new", to: "contents#new" # <Additional>
       post "/contents", to: "contents#create"
-      # get "/content", to: "contents#get"
-      get "/contents", to: "contents#get"
+      get "/content", to: "contents#get"  # checkout POSTMAN spec
       put "/contents", to: "contents#update"
       delete "/contents", to: "contents#delete"
       # project_id로 게시물 id나 게시판 번호 같은걸 할당하려는건가? (See e.g. in POSTMAN collection)
