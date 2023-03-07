@@ -1,4 +1,4 @@
-class Api::V1::ContentsController < ApplicationController
+class Api::V1::ContentsController < Api::V1::ApplicationController
 
   # protect_from_forgery with: :null_session
   # skip_before_action :verify_authenticity_token  # Neutralize CSRF, but it seems not recommended; I need further investigation over security guides.
@@ -11,7 +11,7 @@ class Api::V1::ContentsController < ApplicationController
   def new
     @content = Content.new
   end
-
+  
   def create
     # @content = Content.new(params[:title, :body])  # TODO refer 'User'
     @content = Content.new(content_params)  # TODO refer 'User'

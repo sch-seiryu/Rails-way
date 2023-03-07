@@ -19,23 +19,31 @@ Rails.application.routes.draw do
   # root ""
 
   # root :controller => "static", :action => "/"
+  
+  # TODO:DONE [TESTING] model with no versioning(using namespace) - to check integrity with form_with model featuer in '*.erb'
+  # resources :users  # <- Successfully Tested
 
   namespace :api do
     namespace :v1 do
       # [NOTE]Due to the given POSTMAN specification, using Resourceful Routing feature is discarded, to follow the spec first.
       root "contents#index" # <Additional>
 
-      # User management
-      # 여러모로 상당히 불편하고 해서, 회원가입 관련 기능 및 템플릿도 추가하기로 했다.
-      # 게시물 관련 auth 문제로 자잘하게 고통받느니(일단 사용자 정보가 게시물에 FK로 not null하게 물려있는게 크다. nullable하게 만들고 나중에 바꿔도 되겠지만 또 유저 삭제시 cascade 하는 그런것도 고려해야하고.)
-      # 그냥 유저가 무조건 있다고 가정하고자 한다.
-      get "/users/signin", to: "users#auth"
+      # # User management
+      # # 여러모로 상당히 불편하고 해서, 회원가입 관련 기능 및 템플릿도 추가하기로 했다.
+      # # 게시물 관련 auth 문제로 자잘하게 고통받느니(일단 사용자 정보가 게시물에 FK로 not null하게 물려있는게 크다. nullable하게 만들고 나중에 바꿔도 되겠지만 또 유저 삭제시 cascade 하는 그런것도 고려해야하고.)
+      # # 그냥 유저가 무조건 있다고 가정하고자 한다.
+      # get "/users/signin", to: "users#auth"
+      get "/auth/signin", to: "users#auth"
       get "/users/signup", to: "users#new", defaults: { country: '' }  # optional field인 'country'의 default 설정을 여기서 해봄
-      
+      # &&&
       post "/users/signup", to: "users#sign_up"
       post "/auth/signin", to: "users#sign_in"
-      # update "/users/profile", to: ""  # TODO 
-      delete "/auth/wipeout", to: "users#wipe_out" # <Additional> TODO
+      # # update "/users/profile", to: ""  # TODO 
+      # delete "/auth/wipeout", to: "users#wipe_out" # <Additional> TODO
+      #
+      # -> TODO:DONE Using 'resourceful routing'
+      # sresources :users  # <- Successfully tested
+
 
       # Content CRUD
       # [주의] 여기 post랑 get에 매칭돼야할 경로가 바뀐거 같은데요!

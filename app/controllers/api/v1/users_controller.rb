@@ -1,20 +1,29 @@
-class Api::V1::UsersController < ApplicationController
+class Api::V1::UsersController < Api::V1::ApplicationController
   # To suppress 422 Unprocessable Entity caused by CSRF token authenticity failure, while testing on POSTMAN.
   # protect_from_forgery with: :null_session'
   # rescue_from ActiveRecord::  
+  protect_from_forgery prepend: true
 
   def new
     # @user = User.sign_up
     @user = User.new
   end
 
+  # def show
+  #   new()
+  # end
+
   def auth
     # @user = User.sign_in
     @user = User.new
   end
 
+  def auth_url
+    auth
+  end
+
   def sign_up
-    @user = User.find_by_email(params[:email])  # path/route param이 아닌 request body의 param도 똑같이 접근 가능한가?
+    @user = User.find_by_email(params[:user][:email])  # path/route param이 아닌 request body의 param도 똑같이 접근 가능한가?
     unless @user
       # @user = User.new(params[:firstName, :lastName, :email, :password, :country])
       # @user = User.new(params.require(:user).permit(:firstName, :lastName, :email, :password, :country))\
@@ -23,8 +32,11 @@ class Api::V1::UsersController < ApplicationController
 
       # unless @user.save
       if @user.save
+
+        # TODO redirection
         # redirect_to :sign_in, status: 201
-        redirect_to '/api/v1/users/signin', status: 201  # TODO
+        # redirect_to '/api/v1/users/signin', status: 201
+        redirect_to :auth, status: 201
       #   render "SUCCESSFULLY REGISTERED"
       else
         # render "REGISTRATION FAILED", status: :unprocessable_entity
@@ -46,12 +58,16 @@ class Api::V1::UsersController < ApplicationController
   end
 
   def sign_in
-    @user = User.find_by_email(params[:email])  # path/route param이 아닌 request body의 param도 똑같이 접근 가능한가?
+    # @user = User.find_by_email(params[:user][:email])  # path/route param이 아닌 request body의 param도 똑같이 접근 가능한가?
+    # if @user
+    #   if @user.password == user_auth_param
+    @user = User.find_by_email(user_auth_param[:email])  # path/route param이 아닌 request body의 param도 똑같이 접근 가능한가?
     if @user
-      if @user.password == user_auth_param
+      if @user.password == user_auth_param[:password]
         # Sign in successful.
         # TODO respond auth token
         redirect_to '/api/v1/contents', status: :ok  # 이건 되려나
+        # redirect_to '/contents', status: :ok  # 이렇게도 되려나 <- no no no
       else
         redirect_to @user, status: :bad_request
       end
@@ -72,7 +88,8 @@ class Api::V1::UsersController < ApplicationController
 
   private
     def user_auth_param
-      params.permit(:password)
+      # params.require(:user).permit(:password)
+      params.require(:user).permit(:email, :password)
     end
 
   private
@@ -81,7 +98,9 @@ class Api::V1::UsersController < ApplicationController
       puts "params: #{params}"
       puts "\n"
       # params.require(:user).permit(:firstName, :lastName, :email, :password, :country)
-      params.permit(:firstName, :lastName, :email, :password, :country)
+      # params.permit(:firstName, :lastName, :email, :password, :country)  # This one was working, but as other parts are fixed, this should be changed, too.
+      params.require(:user).permit(:firstName, :lastName, :email, :password, :country)
+
       # temp = {"user": params.permit(:firstName, :lastName, :email, :password, :country)}
       # params = temp.require(:user).permit(:firstName, :lastName, :email, :password, :country)
     end
