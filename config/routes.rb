@@ -52,7 +52,8 @@ Rails.application.routes.draw do
       get "/contents", to: "contents#index" # <Additional>
       get "/contents/new", to: "contents#new" # <Additional>
       post "/contents", to: "contents#create"
-      get "/content", to: "contents#get"  # checkout POSTMAN spec
+      get "/content", to: "contents#show"  # checkout POSTMAN spec
+      get "/contents/:id", to: "contents#show"
       put "/contents", to: "contents#update"
       delete "/contents", to: "contents#delete"
       # project_id로 게시물 id나 게시판 번호 같은걸 할당하려는건가? (See e.g. in POSTMAN collection)

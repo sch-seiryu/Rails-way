@@ -6,15 +6,16 @@
 <ul>
     <% @contents.each do |content| %>
         <li>
-            -- link to the each content
-            <a href="/contents/<%= content.id %>">
+            <%# -- link to the each content; TODO API versioning %>
+            <a href="contents/<%= content.id %>">
                 <%= content.title %>
             </a>
         </li>
     <% end %>
 </ul>
 
-<%= link_to "New Content", "new" %>
+<%#= link_to "New Content", "new" %>
+<%= link_to "New Content", new_content_path %>
 
 <%#= link_to "Sign Up", "" %>
 <%#= link_to "Sign In", "" %> 

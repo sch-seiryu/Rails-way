@@ -5,13 +5,8 @@
 <h1>New Content</h1>
 
 
-<% if false %>
-<%# The guide refers 'helper', so I'm not sure following syntaxes are valid...
-<%= form_with model: @content do |form| %>  %>
-<% end %>
-
-<%= form_with url: "/api/v1/contents", method: :post do |form| %>
-<%# <%= form_with model: @content do |form| %>
+<%#= form_with url: "/api/v1/contents", method: :post do |form| %>
+<%= form_with model: @content do |form| %>
     <div>
         <%= form.label :title %><br>
         <%= form.text_field :title %>

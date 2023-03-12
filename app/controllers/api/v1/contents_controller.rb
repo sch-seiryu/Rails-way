@@ -25,7 +25,7 @@ class Api::V1::ContentsController < Api::V1::ApplicationController
     # TODO proper return value with formed info(like, id)
   end
 
-  def get
+  def show
     @content = Content.find(params[:id])
   end
 
