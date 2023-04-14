@@ -1,11 +1,15 @@
 class Api::V1::ContentsController < Api::V1::ApplicationController
-
   # protect_from_forgery with: :null_session
   # skip_before_action :verify_authenticity_token  # Neutralize CSRF, but it seems not recommended; I need further investigation over security guides.
+
+  # TODO Added@2023-04-11 11:33:29
+  protect_from_forgery prepend: true
+  before_action :authorize, exclude: [:index] # only: [:edit, :update, :destroy]
 
   def index
     # index page shows contents themselves or particular data such as the current number of the contents.
     @contents = Content.all
+    puts "\n=====\n", session, "\n====="
   end
 
   def new
@@ -13,9 +17,7 @@ class Api::V1::ContentsController < Api::V1::ApplicationController
   end
   
   def create
-    # @content = Content.new(params[:title, :body])  # TODO refer 'User'
-    @content = Content.new(content_params)  # TODO refer 'User'
-    # @content = Content.new(params.slice(:title, :body))  # TODO refer 'User'
+    @content = Content.new(content_params.merge!(user: current_user.user_id))  # TODO refer 'User'
 
     if @content.save
       redirect_to @content
@@ -29,33 +31,26 @@ class Api::V1::ContentsController < Api::V1::ApplicationController
     @content = Content.find(params[:id])
   end
 
-  def update
+  def edit
+    @content = Content.find(params[:id])
   end
 
-  def delete
+  def update
+    # TODO scheduled to do after the 'destroy' feature.
+    print "AHHHH"
+  end
+
+  def destroy
+    # TODO apply auth, and apply auth too for 'create', too.(including token handling methods)
+    @content = Content.find(params[:id])
+    @content.destroy  # TODO what about error handling?
+
+    redirect_to root, status: :see_other  # TODO choose proper response code
   end
 
   # Using Strong Parameters for security
   private
     def content_params
-      # params.require(:content).permit(:title, :body)
-      # params.permit(:title, :body, :authenticity_token)
-      # params.require(:title, :body).permit(:authenticity_token)
-      # params.require(:authenticity_token).permit(:title, :body)
-      # params.permit(:authenticity_token)
-      # params.permit(:title, :body)
-      # params.permit(:authenticity_token, :commit).require([:title, :body])
-      # params.require([:title, :body]).permit(:authenticity_token, :commit)
-      
-      # params.require(:title).permit(:authenticity_token, :commit)
-      # params.require(:body).permit(:authenticity_token, :commit)
-
-      # {title: params.require(:title)
-      # body: params.require(:body)}
-      
-      # params
-
-      # params.permit(:title, :body, :authenticity_token, :commit).slice(:title, :body)
-      params.permit(:title, :body, ) # user?
+      params.permit(:title, :body)  #, current_user # user?
     end
 end

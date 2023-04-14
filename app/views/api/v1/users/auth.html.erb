@@ -4,7 +4,7 @@
 <%= form_with model: @user do |form| %>
     <div>
         <%= form.label :email %><br>
-        <%= form.text_field :email %>
+        <%= form.text_field :email, value: "a@b" %>
         <%# To display validation error %>
         <% @user.errors.full_messages_for(:email).each do |message| %>
             <div><%= message %></div>
@@ -13,7 +13,7 @@
 
     <div>
         <%= form.label :password %><br>
-        <%= form.password_field :password %>
+        <%= form.password_field :password, value: "cdef" %>
         <%# To display validation error %>
         <% @user.errors.full_messages_for(:password).each do |message| %>
             <div><%= message %></div>

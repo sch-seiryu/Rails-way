@@ -1,6 +1,24 @@
--- <h1>Contents#get</h1>
--- <p>Find me in app/views/api/v1/contents/get.html.erb</p>
+<%# <h1>Contents#get</h1> %>
+<%# <p>Find me in app/views/api/v1/contents/get.html.erb</p> %>
 
-<h1><%= content.title %></h1>
+<h1><%= @content.title %></h1>
 
-<p><%= content.body %></p>
+<p><%= @content.body %></p>
+
+<ul>
+    <%#= resourcful routing에 쓰이는 레퍼런스에 의해 동작되는 부분들이 
+    은근 있는것 같고, 수동 설정을 위해선 helper 같은 코드의 내용을 수작업으로 처리해야하는 듯하다. 
+    일부 호출 과정에 있어서는 그 점을 확인해보고자 다음과 같이 숫자 '2'를 중간에 끼워서 
+    명시적인 변화를 주거나 해보려고 한다. @2023-03-12 15:35:31 %>
+    <li>
+    <%#= link_to "Edit", edit_2_content_path(@content), data: {turbo_method: :update} %>
+    <%#= link_to "Edit", method: :post, edit_content_path(@content) %>
+    <%= link_to "Edit", controller: "contents", action: "edit", id: @content.id %>
+    <%#= link_to "Edit", content_path(@content) %>
+    <%#= link_to "Edit", action: "edit", @content %>
+    </li>
+    <li><%= link_to "Delete", content_2_path(@content), data: {
+        turbo_method: :delete,
+        turbo_confirm: "Are you sure?"
+    } %></li>
+</ul>

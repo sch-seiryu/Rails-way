@@ -1,0 +1,31 @@
+<%# a 'partial' view for edit, derived from 'new.html.erb' %>
+<%# -> 'partial' is used to render same part of views(templates); I can call this 'form
+ for both 'new' and 'edit' action, but there should be something else are needed, so I'll deal with it further later I'd have dealt with other top priority tasks. %>
+<%# <h1>Edit Content</h1> %>
+
+
+<%= form_with model: content do |form| %>
+    <div>
+        <%= form.label :title %><br>
+        <%#= form.text_field :title %>
+        <%= form.text_field :title, value: "second one!" %>
+        <%# To display validation error %>
+        <% content.errors.full_messages_for(:title).each do |message| %>
+            <div><%= message %></div>
+        <% end %>
+    </div>
+
+    <div>
+        <%= form.label :body %><br>
+        <%#= form.text_area :body %>
+        <%= form.text_area :body, value: "this letter is started from ..." %>
+        <%# To display validation error %>
+        <% content.errors.full_messages_for(:body).each do |message| %>
+            <div><%= message %></div>
+        <% end %>
+    </div>
+
+    <div>
+        <%= form.submit %>
+    </div>
+<% end %>

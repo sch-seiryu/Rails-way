@@ -9,12 +9,33 @@ class Api::V1::UsersController < Api::V1::ApplicationController
     @user = User.new
   end
 
+  # 'Session' component
+  def new_session
+  end
+
+  # 'Session' component
+  def create_session
+    user = User.find_by_email(params[:email])
+    if user && user.authenticate(params[:password])
+      session[:user_id] = user.id
+      redirect_to root
+    else
+      flash.now.alert = "Email or password is invalid"
+      render "new"
+    end
+  end
+
+  # 'Session' component
+  def destroy
+    session[:user_id] = nil
+    redirect root, notice: "Logged out!"
+  end
+
   # def show
   #   new()
   # end
 
   def auth
-    # @user = User.sign_in
     @user = User.new
   end
 
@@ -58,14 +79,21 @@ class Api::V1::UsersController < Api::V1::ApplicationController
   end
 
   def sign_in
+    # This ... create a 'Session' if logged in(signed in) successfully.
+    # I'm triying to unify 'user' and 'session' controller together.
+    # Reference: http://railscasts.com/episodes/250-authentication-from-scratch-revised
+    # @2023-04-05 16:00:51
+
     # @user = User.find_by_email(params[:user][:email])  # path/route param이 아닌 request body의 param도 똑같이 접근 가능한가?
     # if @user
     #   if @user.password == user_auth_param
     @user = User.find_by_email(user_auth_param[:email])  # path/route param이 아닌 request body의 param도 똑같이 접근 가능한가?
     if @user
-      if @user.password == user_auth_param[:password]
+      if @user.password == user_auth_param[:password]  # TODO change into proper auth methods, written in the reference above.(and then proceed to the further auth libs)
         # Sign in successful.
         # TODO respond auth token
+        session[:user_id] = @user.id
+
         redirect_to '/api/v1/contents', status: :ok  # 이건 되려나
         # redirect_to '/contents', status: :ok  # 이렇게도 되려나 <- no no no
       else
@@ -88,20 +116,15 @@ class Api::V1::UsersController < Api::V1::ApplicationController
 
   private
     def user_auth_param
-      # params.require(:user).permit(:password)
       params.require(:user).permit(:email, :password)
     end
 
   private
     def sign_up_param
-      puts "\n"
-      puts "params: #{params}"
-      puts "\n"
-      # params.require(:user).permit(:firstName, :lastName, :email, :password, :country)
+      # puts "\n"
+      # puts "params: #{params}"
+      # puts "\n"
       # params.permit(:firstName, :lastName, :email, :password, :country)  # This one was working, but as other parts are fixed, this should be changed, too.
       params.require(:user).permit(:firstName, :lastName, :email, :password, :country)
-
-      # temp = {"user": params.permit(:firstName, :lastName, :email, :password, :country)}
-      # params = temp.require(:user).permit(:firstName, :lastName, :email, :password, :country)
     end
 end

@@ -18,10 +18,10 @@ module Api
                 end
             end
 
-            def auth_url(user = nil)
-                # TODO recommended to log 'user' info for debugging
-                "/auth/signin"
-            end
+            # def auth_url(user = nil)
+            #     # TODO recommended to log 'user' info for debugging
+            #     "/auth/signin"
+            # end
         end
     end
 end
