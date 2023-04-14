@@ -1,6 +1,11 @@
 # Rails-way
 Practicing 'Ruby on Rails' with a given simple assignment.
 
+## Git branch 'dev1a' announcement
+* In this branch, trying to use Rails' default features and development tools, such as 'resourceful routing', rather than fitting into the API specification directly, which causes lots of troubles here, to build up a properly functional web app. <br>
+Especially struggling with the 'authentication' issues currently, I'm going to follow instructions of the link below - an exercise about to build a fully functional web site with a user auth feature from scratch, instead of using typical auth libs, to understand how a authentication works in Rails.
+> https://stevepolito.design/blog/rails-authentication-from-scratch
+
 ## FURTHER NOTICE
 * To read dev notes, see 'RailsTest_Note.md' in 'dev1' branch; it contains TMI.
 
