@@ -5,6 +5,13 @@ Practicing 'Ruby on Rails' with a given simple assignment.
 * In this branch, trying to use Rails' default features and development tools, such as 'resourceful routing', rather than fitting into the API specification directly, which causes lots of troubles here, to build up a properly functional web app. <br>
 Especially struggling with the 'authentication' issues currently, I'm going to follow instructions of the link below - an exercise about to build a fully functional web site with a user auth feature from scratch, instead of using typical auth libs, to understand how a authentication works in Rails.
 > https://stevepolito.design/blog/rails-authentication-from-scratch
+* Skipping some earlier parts of the reference related with DB/ORM, starting from step 6.
+> https://stevepolito.design/blog/rails-authentication-from-scratch#step-6-create-current-model-and-authentication-concern
+* There's ... '[G2Step7]<Override>' which means 'It is overridden that the Step 7 of Guide number 2, being '. The guide number 2 is the reference just above, the main article of this branch.
+* Skiping G2's (including of some part of the step 8 and step 12) step 9 through step 11, and step 13 through 16, as I don't need features like email confirmation, user management, password reset, and remembering password. Going to step 18, after dropping by step 17.(also ignoring 'Account for Timing Attacks' of step 17, as I use Rails version 7.0.x, not 7.1; note that currently there's two sections with same numbering, 'step 17')
+* Before proceeding to step 18, as there's going to modify models in the step 18, leaving a commit prior making some differences.
+
+===
 
 ## FURTHER NOTICE
 * To read dev notes, see 'RailsTest_Note.md' in 'dev1' branch; it contains TMI.

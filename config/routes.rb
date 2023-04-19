@@ -15,23 +15,18 @@ Rails.application.routes.draw do
       root "contents#index" # <Additional>
 
       # # User management
-      # # 여러모로 상당히 불편하고 해서, 회원가입 관련 기능 및 템플릿도 추가하기로 했다.
-      # # 게시물 관련 auth 문제로 자잘하게 고통받느니(일단 사용자 정보가 게시물에 FK로 not null하게 물려있는게 크다. nullable하게 만들고 나중에 바꿔도 되겠지만 또 유저 삭제시 cascade 하는 그런것도 고려해야하고.)
-      # # 그냥 유저가 무조건 있다고 가정하고자 한다.
-      # get "/users/signin", to: "users#auth"
-      # get "/auth/signin", to: "users#new_session"
-      get "/auth/signin", to: "users#auth", as: "sign_in"
-      get "/users/signup", to: "users#new", defaults: { country: '' }  # optional field인 'country'의 default 설정을 여기서 해봄
-      # &&&
-      post "/auth/signin", to: "users#sign_in"
-      post "/auth/signin", to: "users#create_session"
-      post "/users/signup", to: "users#sign_up"
-      # # update "/users/profile", to: ""  # TODO 
-      # delete "/auth/wipeout", to: "users#wipe_out" # <Additional> TODO
-      #
-      # -> TODO:DONE Using 'resourceful routing'
-      # sresources :users  # <- Successfully tested
+      # get "/auth/signin", to: "users#auth", as: "sign_in"
+      # get "/users/signup", to: "users#new", defaults: { country: '' }  # optional field인 'country'의 default 설정을 여기서 해봄
+      # post "/auth/signin", to: "users#sign_in"
+      # post "/auth/signin", to: "users#create_session"
+      # post "/users/signup", to: "users#sign_up"
 
+      # Session management
+      # [G2Step7]<Override>~
+      post "/auth/signin", to: "sessions#create"
+      delete "/logout", to: "sessions#destroy"
+      get "/auth/signin", to: "sessions#new", as: "login"
+      # ~[G2Step7]<Override>
 
       # Content CRUD
       # [주의] 여기 post랑 get에 매칭돼야할 경로가 바뀐거 같은데요!

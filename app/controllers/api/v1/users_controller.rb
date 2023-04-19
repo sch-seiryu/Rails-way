@@ -2,6 +2,7 @@ class Api::V1::UsersController < Api::V1::ApplicationController
   # To suppress 422 Unprocessable Entity caused by CSRF token authenticity failure, while testing on POSTMAN.
   # protect_from_forgery with: :null_session'
   # rescue_from ActiveRecord::  
+  before_action :redirect_if_authenticated, only: [:create, :new]
   protect_from_forgery prepend: true
 
   def new
