@@ -24,29 +24,42 @@ Rails.application.routes.draw do
       # Session management
       # [G2Step7]<Override>~
       post "/auth/signin", to: "sessions#create"
-      delete "/logout", to: "sessions#destroy"
+
+      # [G2Step20]<Override>~
+      # delete "/logout", to: "sessions#destroy", as: "logout"
+      resources :sessions
+      resources :active_sessions, only: [:destroy] do
+        collection do
+          delete "destroy_all"
+        end
+      end
+      # ~[G2Step20]<Override>
+
       get "/auth/signin", to: "sessions#new", as: "login"
       # ~[G2Step7]<Override>
 
       # Content CRUD
-      # [주의] 여기 post랑 get에 매칭돼야할 경로가 바뀐거 같은데요!
-      # POSTMAN에 있는 collection 한번 봐주세요!
-      # -> 그런 문제가 아닌거 같아 친구.
-      get "/contents", to: "contents#index" # <Additional>
-      get "/contents/new", to: "contents#new" # <Additional>
-      post "/contents", to: "contents#create"
-      post "/contents/new", to: "contents#create"  # might be <Additional>
-      get "/content", to: "contents#show"  # checkout POSTMAN spec
-      get "/contents/:id", to: "contents#show"
-      get "/contents/:id/update", to: "contents#edit"
-      put "/contents/:id", to: "contents#update"
-      delete "/contents/:id", to: "contents#destroy"
-      # project_id로 게시물 id나 게시판 번호 같은걸 할당하려는건가? (See e.g. in POSTMAN collection)
-      # ... 게다가 게시자 정보가? -> 어차피 spefication 보니까 Authorization 탭에 
-      # bearer token이 있던데, project_id는 뭘 말하고 싶었던거지?
-      # 당장은 해당 파라미터의 용도를 알 수 없으므로 무시하겠음.
-      post "/projects/:project_id/contents", to: "contents#create"
-      get "/projects/:project_id/contents", to: "contents#get"
+      resources :contents
+      # resources :contents, path: '/api/v1/contents'
+
+      # # [주의] 여기 post랑 get에 매칭돼야할 경로가 바뀐거 같은데요!
+      # # POSTMAN에 있는 collection 한번 봐주세요!
+      # # -> 그런 문제가 아닌거 같아 친구.
+      # get "/contents", to: "contents#index" # <Additional>
+      # get "/contents/new", to: "contents#new" # <Additional>
+      # post "/contents", to: "contents#create"
+      # post "/contents/new", to: "contents#create"  # might be <Additional>
+      # get "/content", to: "contents#show"  # checkout POSTMAN spec
+      # get "/contents/:id", to: "contents#show"
+      # get "/contents/:id/update", to: "contents#edit"
+      # put "/contents/:id", to: "contents#update"
+      # delete "/contents/:id", to: "contents#destroy"
+      # # project_id로 게시물 id나 게시판 번호 같은걸 할당하려는건가? (See e.g. in POSTMAN collection)
+      # # ... 게다가 게시자 정보가? -> 어차피 spefication 보니까 Authorization 탭에 
+      # # bearer token이 있던데, project_id는 뭘 말하고 싶었던거지?
+      # # 당장은 해당 파라미터의 용도를 알 수 없으므로 무시하겠음.
+      # post "/projects/:project_id/contents", to: "contents#create"
+      # get "/projects/:project_id/contents", to: "contents#get"
       
       # Responses
       # Sign-Up
@@ -58,5 +71,8 @@ Rails.application.routes.draw do
       # 의 형태로 'project_id'라는 경로 매개변수를 가진다. 
       # 원래는 지우려던게 제대로 처리가 안된건가?
     end
+
   end
+  # match 'v:api/*path', :to => redirect("/api/v1/%{path}")
+  # match '*path', :to => redirect("/api/v1/%{path}")
 end

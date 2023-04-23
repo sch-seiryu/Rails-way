@@ -10,6 +10,18 @@ Especially struggling with the 'authentication' issues currently, I'm going to f
 * There's ... '[G2Step7]<Override>' which means 'It is overridden that the Step 7 of Guide number 2, being '. The guide number 2 is the reference just above, the main article of this branch.
 * Skiping G2's (including of some part of the step 8 and step 12) step 9 through step 11, and step 13 through 16, as I don't need features like email confirmation, user management, password reset, and remembering password. Going to step 18, after dropping by step 17.(also ignoring 'Account for Timing Attacks' of step 17, as I use Rails version 7.0.x, not 7.1; note that currently there's two sections with same numbering, 'step 17')
 * Before proceeding to step 18, as there's going to modify models in the step 18, leaving a commit prior making some differences.
+* This is comment block template sample, to identify that the codes have been appended, overridden, or updated from the earlier steps.
+> 
+````
+# [G2Step]<Append>~ 
+# ~[G2Step]<Append>
+````
+* @2023-04-22 19:39:12
+    * 이제 로그인과 로그인한 독립된, 혹은 모든 세션 로그아웃 가능해짐. Session이 제대로 구성된게 중요하고 DB랑 연동도 되어있으며, 권한과 관련해선 아직 제대로 측정 못했지만 내장된 방법들을 경우에 따라선 수동으로 이어주면서(주로 helper에서 versioning 되지 않은 명칭들을 versioning 들어간 유효한 주소로 바꿔주는 작업을 했다. 여기서 처리하면 view 등에는 버전 무관하게 깨끗하게 보여줄 수 있기 때문.) 온전하게 동작하게 했다. 이번 개발 사이클의 핵심은 로그인과 로그아웃이었고, 그걸 위해 기본적인 Session 기능을 이용했다. 별도의 보안 장치(최소한 비밀번호와 관련된 BCrypt 및 has_secure_password)는 모두 배제해둔 상태로 단계적인 적용을 해갈 생각이다. 일부로 이 과정이 없는 가능한한 컴팩트한 구성을 달성하는게 목적이었기 때문에 SSL 정도를 제외한 어떤 보안 관련 도구도 사용하지 않으려고 했다.
+    * 이제 커밋 하고 메인 브랜치로도 1회성 푸시갈 생각(이전 커밋 안 따라오게 Git 좀 더 배워서 할 것)
+    * 내용은 정리해서 커밋할 때 붙일것. -> 굳이 바꿀 필요 있겠나
+    * 대신에 다른 세부 기능들을 정상화시키고 버릴 코드들은 버린 다음 클린한 버전을 main 브랜치에 push하자.
+    * 그리고 하나 더하자면, resourceful routing이 상당히 편리해서 다른 controller의 영역에 있는 기능 등도 비교적 편하게 호출 가능하다. 예를 들어 현재 root 페이지인 contents#index 템플릿에, 접속중인 유저를 표시하고 로그아웃을 수행하는 버튼을 삽입할 수 있었다. 굳이 User 페이지 같은걸 만들어서 이동한 다음, 해당 하위 페이지에서나 관련된 controller를 호출해 계정 로그인과 로그아웃을 진행하거나 하지 않아도 된단 얘기다. 덤으로 session 기반이라, session control을 하는 것으로 불필요한 노동을 줄일 수 있다.
 
 ===
 

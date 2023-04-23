@@ -1,15 +1,36 @@
 <h1>Contents#index</h1>
 <p>Find me in app/views/api/v1/contents/index.html.erb</p>
 <br>
+<% if @active_sessions %>
+    <%= button_to "Log out of all other sessions", destroy_all_active_sessions_path, method: :delete %>
+    <p>Current User: <%= current_user.lastName %>, <%= current_user.firstName %> (<%= current_user.email %>)
+        <br><%#= link_to "Log out", destroy_active_sessions_path, method: :delete %>
+        <br><%#= link_to "Log out", active_sessions_path(@active_sessions), method: :delete %>
+        <table>
+            <thead>
+                <tr>
+                    <th>User Agent</th>
+                    <th>IP Address</th>
+                    <th>Signed In At</th>
+                    <th>Sign Out</th>
+                </tr>
+            </thead>
+            <tbody>
+                <%= render @active_sessions %>
+            </tbody>
+        </table>
+    </p>
+<% end %>
 <br>
 <p>Available content titles:</p>
 <ul>
     <% @contents.each do |content| %>
         <li>
             <%# -- link to the each content; TODO API versioning %>
-            <a href="contents/<%= content.id %>">
-                <%= content.title %>
-            </a>
+            <!-- a href="contents/<%#= content.id %>" -->
+                <%#= content.title %>
+            <%= link_to content.title, content %>
+            <!--/ a -->
         </li>
     <% end %>
 </ul>

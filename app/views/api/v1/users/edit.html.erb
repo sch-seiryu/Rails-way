@@ -1,0 +1,18 @@
+<h1>Edit User</h1>
+
+<h2>Current Logins</h2>
+<% if @active_sessions.any? %>
+    <table>
+        <thead>
+            <tr>
+                <th>User Agent</th>
+                <th>IP Address</th>
+                <th>Signed In At</th>
+                <th>Sign Out</th>
+            </tr>
+        </thead>
+        <tbody>
+            <%= render @active_sessions %>
+        </tbody>
+    </table>
+<% end %>

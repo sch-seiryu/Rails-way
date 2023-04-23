@@ -3,45 +3,27 @@ class Api::V1::UsersController < Api::V1::ApplicationController
   # protect_from_forgery with: :null_session'
   # rescue_from ActiveRecord::  
   before_action :redirect_if_authenticated, only: [:create, :new]
-  protect_from_forgery prepend: true
+  # protect_from_forgery prepend: true
 
   def new
     # @user = User.sign_up
     @user = User.new
   end
 
-  # 'Session' component
-  def new_session
+  # [G2Step19]<Update>~: definition itself is first time though.(appended now)
+  def edit
+    @user = current_user
+    @active_sessions = @user.active_sessions.order(created_at: :desc)
   end
+  
+  def update
+    @user = current_user
+    @active_sessions = @user.active_sessions.order(created_at: :desc)
+    # TODO Lost part - the eariler codes(check eariler steps)
+  # ~[G2Step19]<Update>
 
-  # 'Session' component
-  def create_session
-    user = User.find_by_email(params[:email])
-    if user && user.authenticate(params[:password])
-      session[:user_id] = user.id
-      redirect_to root
-    else
-      flash.now.alert = "Email or password is invalid"
-      render "new"
-    end
-  end
-
-  # 'Session' component
-  def destroy
-    session[:user_id] = nil
-    redirect root, notice: "Logged out!"
-  end
-
-  # def show
-  #   new()
-  # end
-
-  def auth
-    @user = User.new
-  end
-
-  def auth_url
-    auth
+  def create  # TODO redundant?
+    sign_up
   end
 
   def sign_up

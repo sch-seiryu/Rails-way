@@ -3,13 +3,21 @@ class Api::V1::ContentsController < Api::V1::ApplicationController
   # skip_before_action :verify_authenticity_token  # Neutralize CSRF, but it seems not recommended; I need further investigation over security guides.
 
   # TODO Added@2023-04-11 11:33:29
-  protect_from_forgery prepend: true
-  before_action :authorize, exclude: [:index] # only: [:edit, :update, :destroy]
+  # protect_from_forgery prepend: true
+  # before_action :authorize, exclude: [:index] # only: [:edit, :update, :destroy]
 
   def index
     # index page shows contents themselves or particular data such as the current number of the contents.
     @contents = Content.all
-    puts "\n=====\n", session, "\n====="
+    if user_signed_in?
+      @active_sessions = current_user.active_sessions  # (created_at: :desc)
+    else
+      # @active_sessions = ActiveSession.new
+      @active_sessions = nil
+    end
+    # @session_logout = logout
+    # @api_v1_contents = Content.all
+    # puts "\n=====\n", session, "\n====="
   end
 
   def new
@@ -45,7 +53,7 @@ class Api::V1::ContentsController < Api::V1::ApplicationController
     @content = Content.find(params[:id])
     @content.destroy  # TODO what about error handling?
 
-    redirect_to root, status: :see_other  # TODO choose proper response code
+    redirect_to api_v1_root_path, status: :see_other  # TODO choose proper response code
   end
 
   # Using Strong Parameters for security
