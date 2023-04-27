@@ -20,6 +20,10 @@
             </tbody>
         </table>
     </p>
+<% else %>
+    <%#= button_to "Sign In", login_path  %>
+    <%= button_to "Sign In", login_path, method: :get %>
+    <%= button_to "Sign Up", sign_up_path, method: :get %>
 <% end %>
 <br>
 <p>Available content titles:</p>

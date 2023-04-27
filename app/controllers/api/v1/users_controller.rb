@@ -1,12 +1,18 @@
 class Api::V1::UsersController < Api::V1::ApplicationController
   # To suppress 422 Unprocessable Entity caused by CSRF token authenticity failure, while testing on POSTMAN.
-  # protect_from_forgery with: :null_session'
-  # rescue_from ActiveRecord::  
-  before_action :redirect_if_authenticated, only: [:create, :new]
+  # 
+  # Suppressing CSRF - 3 ways
+  # 1. deactivate by skipping auth token + only for sign up?
+  skip_before_action :verify_authenticity_token, only: [:sign_up]
+  # 2. deactivate by prepending forgery
   # protect_from_forgery prepend: true
+  # protect_from_forgery with: :exception  # Just Ref.
+  # 3. deactivate by using null session
+  # protect_from_forgery with: :null_session'
+
+  before_action :redirect_if_authenticated, only: [:create, :new]  # , :sign_in, :sign_up]
 
   def new
-    # @user = User.sign_up
     @user = User.new
   end
 
@@ -20,28 +26,46 @@ class Api::V1::UsersController < Api::V1::ApplicationController
     @user = current_user
     @active_sessions = @user.active_sessions.order(created_at: :desc)
     # TODO Lost part - the eariler codes(check eariler steps)
+  end
   # ~[G2Step19]<Update>
 
   def create  # TODO redundant?
     sign_up
   end
 
+  def sign_in
+    # This ... create a 'Session' if logged in(signed in) successfully.
+    # I'm triying to unify 'user' and 'session' controller together.
+    # Reference: http://railscasts.com/episodes/250-authentication-from-scratch-revised
+    # @2023-04-05 16:00:51
+
+    # @user = User.find_by_email(params[:user][:email])  # path/route param이 아닌 request body의 param도 똑같이 접근 가능한가?
+    # if @user
+    #   if @user.password == user_auth_param
+    @user = User.find_by_email(user_auth_param[:email])  # path/route param이 아닌 request body의 param도 똑같이 접근 가능한가?
+    if @user
+      if @user.password == user_auth_param[:password]  # TODO change into proper auth methods, written in the reference above.(and then proceed to the further auth libs)
+        # Sign in successful.
+        # TODO respond auth token
+        session[:user_id] = @user.id
+
+        redirect_to root, status: :ok
+      else
+        redirect_to @user, status: :bad_request
+      end
+    else
+      redirect_to @user, status: :bad_request
+    end
+  end
+
   def sign_up
     @user = User.find_by_email(params[:user][:email])  # path/route param이 아닌 request body의 param도 똑같이 접근 가능한가?
     unless @user
-      # @user = User.new(params[:firstName, :lastName, :email, :password, :country])
-      # @user = User.new(params.require(:user).permit(:firstName, :lastName, :email, :password, :country))\
-      # @user = User.new(sign_up_param[:user])
       @user = User.new(sign_up_param)
 
-      # unless @user.save
       if @user.save
-
-        # TODO redirection
-        # redirect_to :sign_in, status: 201
-        # redirect_to '/api/v1/users/signin', status: 201
-        redirect_to :auth, status: 201
-      #   render "SUCCESSFULLY REGISTERED"
+        # ~ redirect_to :sign_in, status: 201
+        redirect_to api_v1_login_url, status: 201
       else
         # render "REGISTRATION FAILED", status: :unprocessable_entity
         # render :new, status: :internal_error  # :unprocessable_entity
@@ -61,31 +85,6 @@ class Api::V1::UsersController < Api::V1::ApplicationController
     end
   end
 
-  def sign_in
-    # This ... create a 'Session' if logged in(signed in) successfully.
-    # I'm triying to unify 'user' and 'session' controller together.
-    # Reference: http://railscasts.com/episodes/250-authentication-from-scratch-revised
-    # @2023-04-05 16:00:51
-
-    # @user = User.find_by_email(params[:user][:email])  # path/route param이 아닌 request body의 param도 똑같이 접근 가능한가?
-    # if @user
-    #   if @user.password == user_auth_param
-    @user = User.find_by_email(user_auth_param[:email])  # path/route param이 아닌 request body의 param도 똑같이 접근 가능한가?
-    if @user
-      if @user.password == user_auth_param[:password]  # TODO change into proper auth methods, written in the reference above.(and then proceed to the further auth libs)
-        # Sign in successful.
-        # TODO respond auth token
-        session[:user_id] = @user.id
-
-        redirect_to '/api/v1/contents', status: :ok  # 이건 되려나
-        # redirect_to '/contents', status: :ok  # 이렇게도 되려나 <- no no no
-      else
-        redirect_to @user, status: :bad_request
-      end
-    else
-      redirect_to @user, status: :bad_request
-    end
-  end
 
   def wipe_out
     # clean up all Users - may cause malfunction because of 'content' records.(binding FK)
@@ -102,7 +101,6 @@ class Api::V1::UsersController < Api::V1::ApplicationController
       params.require(:user).permit(:email, :password)
     end
 
-  private
     def sign_up_param
       # puts "\n"
       # puts "params: #{params}"
